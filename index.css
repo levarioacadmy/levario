@@ -1,0 +1,517 @@
+/* ==================================================
+   HERO
+================================================== */
+
+.hero{
+
+    min-height:calc(100vh - 90px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8fbff 100%
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:80px 70px;
+
+    box-shadow:var(--shadow);
+
+    margin-top:30px;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.hero h1{
+
+    font-size:56px;
+
+    line-height:1.1;
+
+    color:var(--text);
+
+    margin-bottom:24px;
+
+    max-width:700px;
+
+}
+
+.hero p{
+
+    color:var(--text-light);
+
+    max-width:650px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:34px;
+
+}
+
+/* Hero CTA Button */
+.hero-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 22px;
+
+    font-size:15px;
+    font-weight:600;
+
+    border-radius:10px;
+
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+
+    box-shadow:0 8px 18px rgba(37,99,235,.18);
+
+    transition:.3s ease;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:var(--primary-dark);
+
+}
+
+/* HERO LOGO TEXT */
+
+.hero-logo-text{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-family:"Megrim",sans-serif;
+
+    font-size:82px;
+
+    letter-spacing:4px;
+
+    color:var(--text);
+
+    z-index:2;
+
+    user-select:none;
+
+    transition:.35s;
+
+}
+
+.rotating-wrapper:hover .hero-logo-text{
+
+    transform:translate(-50%,-50%) scale(1.05);
+
+    color:var(--primary);
+
+}
+
+
+
+/* Subsection cards */
+.sub-section{
+
+    background:var(--surface);
+
+    padding:42px;
+
+    border-radius:22px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    margin:34px auto 0;
+
+    max-width:1100px;
+
+    width:100%;
+
+    transition:.35s;
+
+}
+.sub-section:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+}
+.sub-section h2{
+
+    color:var(--text);
+
+    font-size:34px;
+
+    margin-bottom:24px;
+
+}
+.sub-section p,
+.sub-section li{
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+.sub-grid{
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  align-items:start;
+  margin-top:12px;
+}
+
+/* Lists inside subsection cards */
+.sub-section ul{
+    list-style: disc;
+    padding-left: 18px;
+}
+
+/* -----------------------------------------
+   HERO ROTATING LV LOGO
+----------------------------------------- */
+.hero-art{
+  flex:0 0 360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+
+/* Wrapper to stack SVG + image */
+.rotating-wrapper{
+  position:relative;
+  width:300px;
+  height:300px;
+}
+
+/* Center image */
+.lv-image{
+  position:absolute;
+  top:52%;
+  left:48%;
+
+  /* 👇 manual visual correction */
+  transform:translate(-50%, -50%) translate(8px, -10px);
+
+  width:200px;
+  height:auto;
+  z-index:2;
+}
+
+
+/* SVG rotating text */
+.rotating-text{
+  width:300px;
+  height:300px;
+  animation: rotate 18s linear infinite;
+  transform-origin:50% 50%;
+}
+
+/* Text style */
+.rotating-text text{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:3px;
+  fill:var(--primary);
+  text-transform:uppercase;
+}
+
+@keyframes rotate{
+  from{ transform:rotate(0deg); }
+  to{ transform:rotate(360deg); }
+}
+
+
+/* ==================================================
+   FEATURE GRID
+================================================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+    margin-top:20px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:28px 24px;
+
+    text-align:left;
+
+    transition:.35s ease;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.feature-card i{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+.feature-card p{
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+/* ==================================================
+   HOW IT WORKS
+================================================== */
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+    margin-top:20px;
+
+}
+
+.process-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:28px 24px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s ease;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.process-number{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.process-card i{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.process-card h3{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+.process-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+
+    /* ---------- HERO ---------- */
+  .hero{
+    flex-direction: column;
+    padding: 22px;
+    gap: 24px;
+    border-radius: 12px;
+  }
+
+  .hero-left{
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .hero h1{
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero p{
+    font-size: 15px;
+  }
+
+  .hero-left div{
+    justify-content: center;
+  }
+
+  /* ---------- ROTATING LOGO ---------- */
+  .hero-art{
+    flex: none;
+  }
+
+  .rotating-wrapper{
+    width: 220px;
+    height: 220px;
+  }
+
+  .rotating-text{
+    width: 220px;
+    height: 220px;
+  }
+
+  .lv-image{
+    width: 140px;
+    transform: translate(-50%, -50%) translate(4px, -6px);
+  }
+}

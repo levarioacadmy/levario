@@ -1,0 +1,267 @@
+/* -----------------------------------------
+  CAREER
+----------------------------------------- */
+
+#career{
+    display:block;
+    padding:40px 20px 10px;
+    max-width:900px;
+    margin:auto;
+}
+
+
+#career .career-title {
+  color: #D9D9D9;      
+  text-align: center;
+  font-size: 28px;    
+  margin-bottom: 26px;
+}
+
+.job-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:16px;
+}
+
+.job-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.job-title{
+
+    font-size:30px;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.job-meta{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin:14px 0 20px;
+
+}
+
+.meta-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.meta-pill i{
+
+    font-size:13px;
+
+}
+
+.job-description{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin:0 0 24px;
+
+}
+
+.job-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+.job-status i{
+
+    font-size:10px;
+
+    color:#22C55E;
+
+}
+
+.job-skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:22px;
+
+}
+
+.job-skills span{
+
+    padding:8px 14px;
+
+    background:#F8FAFC;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    transition:.25s;
+
+}
+
+.job-skills span:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+}
+
+.job-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:28px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.page-hero{
+    max-width:1320px;
+    margin:0 auto;
+    padding:40px 48px 60px;
+}
+
+/* ==================================================
+   APPLY BUTTON
+================================================== */
+
+.apply-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 20px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.18);
+
+    transition:.3s;
+
+}
+
+.apply-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 24px rgba(37,99,235,.25);
+
+}
+
+.apply-btn i{
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.apply-btn:hover i{
+
+    transform:translateX(3px);
+
+}
+
+
+
+
+
+

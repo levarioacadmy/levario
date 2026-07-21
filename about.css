@@ -1,0 +1,151 @@
+
+
+
+/* ==========================================
+   ABOUT SECTIONS
+========================================== */
+
+.about-section{
+
+    max-width:1180px;
+    width:100%;
+
+    margin:40px auto;
+
+    padding:56px 64px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.about-section h2{
+
+    color:var(--text);
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.section-intro{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    margin-bottom:48px;
+
+    max-width:850px;
+
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:32px;
+}
+
+
+/* ==========================================
+   SMALL CARDS
+========================================== */
+
+.info-card{
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:28px 32px;
+    min-height:220px;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.info-card i{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#EEF4FF;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    margin-bottom:16px;
+
+}
+
+.info-card h3{
+
+    font-size:24px;
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+}
+
+.info-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+
+
+    .about-section{
+
+        padding:28px;
+
+    }
+
+    .about-section h2{
+
+        font-size:30px;
+
+    }
+
+}

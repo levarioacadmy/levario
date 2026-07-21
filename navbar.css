@@ -1,0 +1,271 @@
+/* --------------------------------------------------
+   HEADER & NAVIGATION
+-------------------------------------------------- */
+
+
+/* Header Flex Layout */
+header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 6%;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* LEFT: Logo */
+
+
+/* CENTER: Nav */
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 1;       /* allow nav to shrink if needed */
+  overflow-x: auto;     /* scroll horizontally if too many links */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+.header-center::-webkit-scrollbar {
+  display: none; /* hide scrollbar in Chrome/Safari */
+}
+
+/* Nav links */
+.header-center a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    white-space:nowrap;
+
+    padding-bottom:8px;
+
+    transition:.25s;
+
+}
+
+.header-center a:hover,
+.header-center a.active{
+
+    color:var(--primary);
+
+}
+
+.header-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+  border-radius: 3px;
+}
+
+.header-center a:hover::after,
+.header-center a.active::after {
+  width: 100%;
+}
+
+
+
+/* =========================================
+   TEXT LOGO
+========================================= */
+
+.logo-text{
+
+    font-family:"Megrim", sans-serif;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+    line-height:1;
+
+        text-shadow:
+        0.3px 0 currentColor,
+       -0.3px 0 currentColor;
+
+}
+
+.logo-text:hover{
+
+    color:var(--primary);
+
+}
+
+/* =========================================
+   CLEAN MOBILE NAV — SINGLE BREAKPOINT
+========================================= */
+
+/* Hide hamburger by default (desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Hamburger bars */
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+/* Mobile nav drawer (hidden by default) */
+.mobile-nav {
+  position: fixed;
+  top: 64px;
+  right: -100%;
+  width: 260px;
+  height: calc(100vh - 64px);
+
+  padding: 24px 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
+
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+/* Mobile nav links */
+.mobile-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Open state */
+.mobile-nav.open {
+  right: 0;
+}
+
+
+
+
+/* =========================================
+   MOBILE NAV — ACTIVE & HOVER UNDERLINE
+========================================= */
+
+
+/*Mobile nav links (anchor)*/
+.mobile-nav a {
+  display: block;            /* Anchor poori row le — easy tap on mobile */
+  padding: 10px 0;           /* Vertical spacing between menu items */
+}
+
+
+/*Text wrapper inside anchor*/
+.mobile-nav a span {
+  position: relative;        
+  display: inline-block;     
+                                
+}
+
+
+/*Underline (pseudo-element)*/
+.mobile-nav a span::after {
+  content: "";               
+  position: absolute;        /* Span ke relative position */
+  left: 0;                   /* Text ke start se */
+  bottom: -6px;              /* Text ke thoda neeche underline */
+
+  width: 100%;               /* Span ki width = text ki width */
+  height: 3px;               /* Underline thickness */
+  background: var(--primary);  
+  border-radius: 3px;        /* Smooth rounded edges */
+
+  transform: scaleX(0);      /* By default hidden */
+  transform-origin: left;    /* Animation left se start hogi */
+  transition: transform 0.25s ease; /* Smooth animation */
+}
+
+
+/*Hover state (mouse / touch highlight)*/
+.mobile-nav a:hover span::after {
+  transform: scaleX(1);      /* Underline visible ho jaati hai */
+}
+
+
+/*Active page underline (current page)*/
+.mobile-nav a.active span::after {
+  transform: scaleX(1);      /* Active page par underline hamesha visible */
+}
+
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+/* Responsive */
+@media (max-width:880px){  
+
+  header{padding:12px 4%}
+
+}
+
+@media (max-width: 780px) {
+  .header-center {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+      /* ---------- HEADER / NAV ---------- */
+  .header-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
